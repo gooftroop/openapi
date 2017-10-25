@@ -1,0 +1,32 @@
+import Rule from '../rule';
+import Responses from '../../../schema/responses';
+
+/**
+ * [definition description]
+ * @type {[type]}
+ */
+export default class ResponsesRule extends Rule {
+  /**
+   * [destination description]
+   * @type {[type]}
+   */
+  value(definition: any, context: Object): any {
+    return new Responses(definition, context);
+  }
+
+  /**
+   * [definition description]
+   * @type {[type]}
+   */
+  validateDefinition(definition: any): ?Error {
+    return null;
+  }
+
+  /**
+   * [definition description]
+   * @type {[type]}
+   */
+  validateState(definition: any, state: OpenApiSchema): ?Error {
+    return null;
+  }
+}

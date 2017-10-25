@@ -1,0 +1,17 @@
+[ignore]
+<PROJECT_ROOT>/test/.*
+<PROJECT_ROOT>/dist/.*
+<PROJECT_ROOT>/node_modules/config-chain/test/broken.json
+
+
+[include]
+
+[libs]
+
+[options]
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+unsafe.enable_getters_and_setters=true
+
+module.name_mapper='^v3\/\(.*\)$' -> '<PROJECT_ROOT>/src/v3/\1'
+module.name_mapper='^test\/\(.*\)$' -> '<PROJECT_ROOT>/test/\1'
